@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost\SQLExpress:1433;databaseName=PortailCandidature;encrypt=true;trustServerCertificate=true;
+    username: sa
+    password: 654321
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      database-platform: org.hibernate.dialect.SQLServer2012Dialect
+      show-sql: true
+
+logging:
+  level:
+    root: info
+    org.springframework.web: debug
+
+server:
+  port: 8080
