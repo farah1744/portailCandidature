@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/Candidatures")
+@RequestMapping("/candidature")
 @AllArgsConstructor
 @Tag(name = "Candidature API", description = "API pour gerer les candidatures")
 public class CandidatureController {
