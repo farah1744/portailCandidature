@@ -1,5 +1,6 @@
 package ma.gov.mhpv.PortailCandidature.service;
 
+import lombok.AllArgsConstructor;
 import ma.gov.mhpv.PortailCandidature.DTO.DiplomeDTO;
 import ma.gov.mhpv.PortailCandidature.mapper.IDiplomeMapper;
 import ma.gov.mhpv.PortailCandidature.model.Diplome;
@@ -9,14 +10,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
+@AllArgsConstructor
 public class DiplomeServiceImpl implements IDiplomeService {
-    private final DiplomeRepository diplomeRepository;
-    private final IDiplomeMapper diplomeMapper;
+    private DiplomeRepository diplomeRepository;
+    private IDiplomeMapper diplomeMapper;
 
-    public DiplomeServiceImpl(DiplomeRepository diplomeRepository, IDiplomeMapper diplomeMapper) {
-        this.diplomeMapper = diplomeMapper;
-        this.diplomeRepository = diplomeRepository;
-    }
 
     @Override
     public List<DiplomeDTO> getAllDiplome() {
